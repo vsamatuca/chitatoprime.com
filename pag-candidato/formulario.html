@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal de Empregabilidade Web">
+    <meta name="keywords" content="emprego,empresas,candidatos,vagas,currículo,portal,empregabilidade,web">
+    <meta name="author" content="Valdemiro Samatuca, Abrao Da Silva">
+    <link rel="shortcut icon" href="../img/FavIcon.ico" type="image/x-icon">
+    <title>Cadastro do candidato</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="formulario-box">
+
+        <h2>Formulário</h2>
+
+        <form id="form" action="mailto:chitatoprime662@gmail.com" method="POST">  
+            <input type="text" id="nome" name="nome" placeholder="Nome Completo" class="required" oninput="nameValidade()">
+            <span class="span-required">Nome inválido!</span>
+
+            <input type="email" id="email" name="email" placeholder="Digite seu E-mail" class="required" oninput="emailValidate()">
+            <span class="span-required">Digite um email válido!</span>
+
+            <input type="text" id="morada" name="morada" placeholder="Morada" class="required" oninput="liveValidate()">
+            <span class="span-required">Digite a sua morada</span>
+
+            <p>Sexo:</p>
+            <div class="box-select">
+                <div>
+                    <input type="radio" id="masculino" value="masculino" name="sexo">
+                    <label for="masculino">Masculino</label>
+                </div>
+                <div>
+                    <input type="radio" id="feminino" value="feminino" name="sexo">
+                    <label for="feminino">Feminino</label>
+                </div>
+            </div>
+                
+            <input type="password" id="senha" name="senha" placeholder="Senha" class="required" oninput="mainPasswordValidade()">
+            <span class="span-required">Senha deve ter no mínimo 8 dígitos</span>
+
+            <input type="password" placeholder="Confirmar senha" class="required" oninput="comparePasswordValidade()">
+            <span class="span-required">Senhas devem ser compatíveis</span>
+            
+            <input type="submit" name="submit" id="submit" value="Enviar"/>
+
+        </form>
+        <a href="../index.php">Voltar a página principal</a>
+    </div>
+</body>
+
+<script src="functionn.js"></script>
+
+</html>

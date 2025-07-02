@@ -1,0 +1,79 @@
+body {
+    background-image: linear-gradient(to right, rgb(20,147,220), rgb(17,54,71));
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.formulario-box, .login-box {
+    background-color: white;
+    width: 340px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: grid;
+    gap: 16px;
+}
+form{
+    display: grid;
+    gap: 10px;
+}
+h2{
+    color: #333;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.formulario-box form input, .login-box form input{
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.span-required{
+    font-size: 12px;
+    display: none;
+    color: red;
+    margin-top: -10px;
+}
+.login-box form input:focus{
+    border-color: #004853;
+}
+.login-box form input[type="submit"], .formulario-box form input[type="submit"]{
+    background-color: #004853;
+    color: white;
+    font-size: 16px;
+    border: none;
+}
+.login-box form input[type="submit"]:hover, .formulario-box form input[type="submit"]:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+a{
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+}
+a:hover{
+    text-decoration: underline;
+    color: blue;
+}
+.box-select{
+    display: flex;
+}
+@media screen and (max-width: 576px){
+    .box-select{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .formulario-box {
+        width: 50%;
+    }
+    .login-box {
+        width: 50%;
+    }
+}
